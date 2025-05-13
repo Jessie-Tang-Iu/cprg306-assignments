@@ -75,6 +75,8 @@ export default function ItemList() {
       };
 
     return (
-        <Item item={item1} />
+        <main>
+            <Item item={item1} />
+        </main>
     );
 }
