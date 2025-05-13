@@ -3,10 +3,12 @@
 export default function Item({props}) {
 
     let item = { 
-        name: props.name, 
-        quantity: props.quantity, 
-        category: props.category,
+        name: "", 
+        quantity: 0, 
+        category: "",
     };
+
+    item = props;
 
     return (
         <p className="px-4 py-2 m-8 bg-slate-800">
