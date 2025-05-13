@@ -1,26 +1,16 @@
 import Link from "next/link";
-import MyFirstComponent from "./_components/my-first-component";
 
 
 export default function Home() {
-
-  // this is a single line comment
-  /*
-  this is a 
-  multi-line comment
-   */
-
     return (
     <main>
       {
         // test
       }
-      <h1 className="text-3xl">CPRG306 Class Examples</h1>
-      <p>Hello World!</p>
-      <MyFirstComponent />
+      <h1 className="text-3xl">CPRG 306: Web Development 2 - Assignments</h1>
       <h2>Course Example Links</h2>
       <ul>
-        <li> <Link href="./week-2/" className="text-cyan-600 underline hover:text-cyan-300">Week 2 - Intro to React</Link> </li>
+        <li> <Link href="./week-2/" className="text-cyan-600 underline hover:text-cyan-300">Week 2 - Link To My Week 2 Assignment</Link> </li>
       </ul>
     </main>
   );
