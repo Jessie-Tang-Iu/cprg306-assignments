@@ -74,9 +74,26 @@ export default function ItemList() {
         category: "household",
       };
 
+    const items = [
+        item1,
+        item2,
+        item3,
+        item4,
+        item5,
+        item6,
+        item7,
+        item8,
+        item9,
+        item10,
+        item11,
+        item12
+    ];
+
     return (
         <main>
-            <Item props={item1} />
+            for (let index = 0; index < items.length()-1; index++) {
+                <Item props={items[index]} />
+            }
         </main>
     );
 }
