@@ -91,9 +91,18 @@ export default function ItemList() {
 
     return (
         <main>
-            for (let index = 0; index < items.length()-1; index++) {
-                <Item props={items[index]} />
-            }
+            <Item props={item1} />
+            <Item props={item2} />
+            <Item props={item3} />
+            <Item props={item4} />
+            <Item props={item5} />
+            <Item props={item6} />
+            <Item props={item7} />
+            <Item props={item8} />
+            <Item props={item9} />
+            <Item props={item10} />
+            <Item props={item11} />
+            <Item props={item12} />
         </main>
     );
 }
