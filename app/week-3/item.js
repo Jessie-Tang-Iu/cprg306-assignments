@@ -3,9 +3,9 @@
 export default function Item({props}) {
 
     let item = { 
-        name: "props.name", 
-        quantity: "props.quantity", 
-        category: "props.category",
+        name: props.name, 
+        quantity: props.quantity, 
+        category: props.category,
     };
 
     return (
