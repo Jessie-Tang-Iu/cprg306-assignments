@@ -15,7 +15,11 @@ export default function ObjectPage(){
         }
     }
 
-    let {studentName, studentAge} = studentOne;
+    let {
+        studentName: name, 
+        studentAge: age,
+        schedule: [course1, course2, course3, course4]
+    } = studentOne;
 
     return(
         <main>
@@ -27,8 +31,9 @@ export default function ObjectPage(){
             <p>City: {studentOne.address.city}</p>
             <br />
             <h2>Destructuring</h2>
-            <p>Name: {studentName}</p>
-            <p>Age: {studentAge}</p>
+            <p>Name: {name}</p>
+            <p>Age: {age}</p>
+            <p>WebDev2: {course3}</p>
         </main>
     );
 }
