@@ -1,4 +1,4 @@
-import StduentComponent from "./student-component";
+import StudentComponent from "./student-component";
 
 export default function PropsPage(){
     
@@ -16,7 +16,7 @@ export default function PropsPage(){
 
     return(
         <main>
-            <StduentComponent sName={studentOne.studentName} sAge={studentOne.studentAge} sCity={studentOne.address.city} />
+            <StudentComponent sName={studentOne.studentName} sAge={studentOne.studentAge} sCity={studentOne.address.city} />
         </main>
     );
 }

@@ -1,6 +1,6 @@
 
 
-export default function StduentComponent(props){
+export default function StudentComponent(props){
 
     if( props.sAge.isNan() ){
         let age = 0;
