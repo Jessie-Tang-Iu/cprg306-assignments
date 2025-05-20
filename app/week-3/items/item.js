@@ -1,6 +1,6 @@
 
 
-export default function Item(item) {
+export default function Item({item}) {
 
     let {name: iName} = item;
 
