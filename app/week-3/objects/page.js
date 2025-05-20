@@ -19,7 +19,9 @@ export default function ObjectPage(){
         studentName: name, 
         studentAge: age,
         // schedule: [course1, course2, course3, course4]
-        schedule: [,,,webDev2]
+        // schedule: [,,,webDev2]
+        schedule: {3:webDev2},
+        address: {city}
     } = studentOne;
 
     return(
@@ -34,7 +36,8 @@ export default function ObjectPage(){
             <h2>Destructuring</h2>
             <p>Name: {name}</p>
             <p>Age: {age}</p>
-            <p>WebDev2: {webDeb2}</p>
+            <p>WebDev2: {webDev2}</p>
+            <p>City: {city}</p>
         </main>
     );
 }
