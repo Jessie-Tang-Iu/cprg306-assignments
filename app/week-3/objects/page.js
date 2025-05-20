@@ -20,7 +20,9 @@ export default function ObjectPage(){
             <h1>Objects</h1>
             <h2>Dot Notation</h2>
             <p>Name: {studentOne.studentName}</p>
-            <p></p>
+            <p>Age: {studentOne.studentAge}</p>
+            <p>WebDev2: {studentOne.schedule[3]}</p>
+            <p>City: {studentOne.address.city}</p>
         </main>
     );
 }
