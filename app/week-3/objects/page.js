@@ -15,7 +15,7 @@ export default function ObjectPage(){
         }
     }
 
-    let {studentName} = studentOne;
+    let {studentName, studentAge} = studentOne;
 
     return(
         <main>
@@ -28,6 +28,7 @@ export default function ObjectPage(){
             <br />
             <h2>Destructuring</h2>
             <p>Name: {studentName}</p>
+            <p>Age: {studentAge}</p>
         </main>
     );
 }
