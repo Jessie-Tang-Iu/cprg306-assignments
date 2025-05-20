@@ -75,7 +75,7 @@ export default function ItemList() {
       };
 
     return (
-        <main>
+        <div>
             <Item item={item1} />
             <Item item={item2} />
             <Item item={item3} />
@@ -88,6 +88,6 @@ export default function ItemList() {
             <Item item={item10} />
             <Item item={item11} />
             <Item item={item12} />
-        </main>
+        </div>
     );
 }
