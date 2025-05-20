@@ -2,14 +2,13 @@
 
 export default function Item({item}) {
 
-    let {name: iName} = item;
+    let {name:iName, quantity:iQuantity, category:iCategory} = item;
 
     return (
         <div>
             <p className="px-4 py-2 m-8 bg-slate-800">
-                <p>{iName}</p>
-                <p className="text-lg font-bold">{item.name}</p>
-                <p>Buy {item.quantity} in {item.category}</p>
+                <p className="text-lg font-bold">{iName}</p>
+                <p>Buy {iQuantity} in {iCategory}</p>
             </p>
         </div>
     );
