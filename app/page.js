@@ -20,6 +20,8 @@ export default function Home() {
         <li> <Link href="./week-4/" className={linkStyles}>Week 4 - Link To My Week 4 Assignment</Link> </li>
         <li> <Link href="./week-5/nameForm" className={linkStyles}>Week 5 - Name Form</Link> </li>
         <li> <Link href="./week-5/" className={linkStyles}>Week 5 - Link To My Week 5 Assignment</Link> </li>
+        <li> <Link href="./week-6/array" className={linkStyles}>Week 6 - Array</Link> </li>
+        <li> <Link href="./week-6/contact" className={linkStyles}>Week 6 - Contact</Link> </li>
       </ul>
     </main>
   );
