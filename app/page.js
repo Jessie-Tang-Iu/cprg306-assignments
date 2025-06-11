@@ -23,6 +23,7 @@ export default function Home() {
         <li> <Link href="./week-6/array" className={linkStyles}>Week 6 - Array</Link> </li>
         <li> <Link href="./week-6/contact" className={linkStyles}>Week 6 - Contact</Link> </li>
         <li> <Link href="./week-6/" className={linkStyles}>Week 6 - Link To My Week 6 Assignment</Link> </li>
+        <li> <Link href="./week-7/" className={linkStyles}>Week 7 - Link To My Week 7 Assignment</Link> </li>
       </ul>
     </main>
   );
