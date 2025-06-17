@@ -2,7 +2,7 @@
 import DogCard from "./dog-card";
 
 
-export default function DogList({ dogArray }) {
+export default function DogList({ dogArray, removeDogFunc }) {
 
     return(
         <section className="p-5">
@@ -10,7 +10,7 @@ export default function DogList({ dogArray }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {
                     dogArray.map( (dog) => (
-                        <DogCard key={dog.id} dogObj={dog} />
+                        <DogCard removeDogFunc={removeDogFunc} key={dog.id} dogObj={dog} />
                     ))
                 }
             </div>

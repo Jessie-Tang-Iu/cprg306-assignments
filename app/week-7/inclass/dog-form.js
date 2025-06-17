@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 
-export default function DogForm({ onAddDog, dogArray }) {
+export default function DogForm({ onAddDog, dogArray, closeFormFunc }) {
 
     const [id, setId] = useState("");
     const [name, setName] = useState("");
@@ -35,14 +35,18 @@ export default function DogForm({ onAddDog, dogArray }) {
     const submitFunction = (event) => {
         event.preventDefault();
 
-        let dog = {
-            id: id,
-            name: name,
-            breed: breed,
-            PhotoUrl: PhotoUrl
-        };
+        if (checkId(id))
+        {
+            let dog = {
+                id: id,
+                name: name,
+                breed: breed,
+                PhotoUrl: PhotoUrl
+            };
 
-        checkId(id) && (onAddDog(dog));
+            onAddDog(dog);
+            closeFormFunc();
+        }
 
         setId("");
         setName("");
@@ -52,27 +56,27 @@ export default function DogForm({ onAddDog, dogArray }) {
 
     return(
         <div>
-            <form onSubmit={submitFunction}>
-                <h2>Add a new dog for Adoption</h2>
-                <div>
-                    <label>ID: </label>
-                    <input type="number" onChange={handleIdChange} value={id} />
+            <form onSubmit={submitFunction} className="bg-green-50 rounded p-5 text-black max-w-md">
+                <h2 className="text-2xl mb-2">Add a new dog for Adoption</h2>
+                <div className="mb-2">
+                    <label className="inline-block w-40">ID: </label>
+                    <input className="border-2 rounded" type="number" onChange={handleIdChange} value={id} />
                 </div>
-                <div>
-                    <label>Dog Name: </label>
-                    <input type="text" onChange={handleNameChange} value={name} />
+                <div className="mb-2">
+                    <label className="inline-block w-40">Dog Name: </label>
+                    <input className="border-2 rounded" type="text" onChange={handleNameChange} value={name} />
                 </div>
-                <div>
-                    <label>Breed: </label>
-                    <input type="text" onChange={handleBreedChange} value={breed} />
+                <div className="mb-2">
+                    <label className="inline-block w-40">Breed: </label>
+                    <input className="border-2 rounded" type="text" onChange={handleBreedChange} value={breed} />
                 </div>
-                <div>
-                    <label>Photo URL: </label>
-                    <input type="text" onChange={handlePhotoUrlChange} value={PhotoUrl} />
+                <div className="mb-2">
+                    <label className="inline-block w-40">Photo URL: </label>
+                    <input className="border-2 rounded" type="text" onChange={handlePhotoUrlChange} value={PhotoUrl} />
                 </div>
-                <div>
+                <div className="mb-2">
                     <button
-                        className="bg-blue-500 text-white rounded px-3 py-2 hover:bg-green-500 active:bg-amber-400"
+                        className="bg-blue-500 text-white rounded px-3 py-2 hover:bg-green-500 active:bg-amber-400 cursor-pointer"
                         type="submit"
                     >Add New Dog</button>
                 </div>

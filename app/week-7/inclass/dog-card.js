@@ -1,7 +1,7 @@
 
 
 
-export default function Dog( {dogObj} ) {
+export default function Dog( {dogObj, removeDogFunc} ) {
 
     const {id, name, breed, photoUrl} = dogObj;
 
@@ -14,6 +14,7 @@ export default function Dog( {dogObj} ) {
                 <h3 className="text-lg font-bold">{name}</h3>
                 <p>ID: {id}</p>
                 <p>Breed: {breed}</p>
+                <button className="bg-red-700 text-white rounded px-3 py-2 cursor-pointer" type="button" id={id} onClick={removeDogFunc}>Remove Dog</button>
             </div>
         </div>
     );
