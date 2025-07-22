@@ -1,9 +1,12 @@
 "use client";
 import { useState } from "react";
+import { addItem } from "../_services/shopping-list-service";
+import { useUserAuth } from "../_utils/auth-context";
 
 
 export default function NewItem({ onAddItem }) {
 
+    const { user } = useUserAuth();
     const [quantity, setQuantity] = useState(1);
     const [name, setName] = useState("");
     const [category, setCategory] = useState("Produce");
@@ -22,7 +25,7 @@ export default function NewItem({ onAddItem }) {
         }
     }
 
-    const submitFunction = (event) => {
+    const submitFunction = async (event) => {
         event.preventDefault();
 
         let id = Math.random().toString(36).slice(2, 11);
@@ -37,6 +40,8 @@ export default function NewItem({ onAddItem }) {
         // alert(`Added item: ${item.name}, quantity: ${item.quantity}, category: ${item.category}`)
 
         onAddItem(item);
+
+        await addItem(user.uid, item);
 
         setName("");
         setQuantity(1);

@@ -53,7 +53,7 @@ export default function Page() {
                 ) : (
                     <section>
                         <p>You must be logged in to view this page</p>
-                        <Link href="/week-9/" className="text-cyan-600 underline hover:text-cyan-300">Click here to return to the sign in page.</Link>
+                        <Link href="/week-10/" className="text-cyan-600 underline hover:text-cyan-300">Click here to return to the sign in page.</Link>
                     </section>
                 )
             }
