@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useUserAuth } from "./_utils/auth-context";
+import { useEffect, useState } from "react";
+import { dbGetAllPosts } from "./_services/blog-service";
 
 
 export default function SignInPage() {
@@ -26,6 +28,15 @@ export default function SignInPage() {
 
     console.dir(user);
 
+    const [blogPostList, setBlogPostList] = useState([]);
+    useEffect( () => {
+        if(user) {
+            dbGetAllPosts(user.uid, setBlogPostList);
+        }
+    }, [user] );
+
+    console.log(blogPostList);
+
     return(
         <main>
             <header>
@@ -41,6 +52,21 @@ export default function SignInPage() {
                         onClick={handleSignOut}
                         className="text-lg bg-blue-600 text-white rounded px-2 py-1 mt-4"
                         type="button">Sign Out</button>
+                    </div>
+                    <div>
+                        <h2>List of {user.displayName} Blog Post</h2>
+                        <ul>
+                            {
+                                blogPostList.map( (post) => {
+                                    let postUrl = `/week-10/${post.id}`;
+                                    return(
+                                        <li key={post.id}>
+                                            <Link href={postUrl}>{post.title}</Link>
+                                        </li>
+                                    )
+                                } )
+                            }
+                        </ul>
                     </div>
                 </section>
             ) : (
