@@ -46,7 +46,10 @@ export default function SignInPage() {
             { user ? (
                 <section>
                     <p>Welcome, {user.displayName} ({user.email})</p>
-                    <Link href="/week-10/add-blog-post/" className="text-cyan-600 underline hover:text-cyan-300">Add new Blog Post</Link>
+                    <ul>
+                        <li><Link href="/week-10/shopping-list/" className="text-cyan-600 underline hover:text-cyan-300">Link to Shopping List</Link></li>
+                        <li><Link href="/week-10/add-blog-post/" className="text-cyan-600 underline hover:text-cyan-300">Add new Blog Post</Link></li>
+                    </ul>
                     <div>
                         <button 
                         onClick={handleSignOut}
